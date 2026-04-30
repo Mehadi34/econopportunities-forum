@@ -32,6 +32,7 @@ import '../screens/admin/manage_forum_screen.dart';
 import '../screens/admin/manage_resources_screen.dart';
 import '../screens/admin/analytics_screen.dart';
 import '../screens/admin/create_announcement_screen.dart';
+import '../screens/infographic/economics_infographic_screen.dart';
 
 final appRouterProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authStateProvider);
@@ -140,6 +141,10 @@ final appRouterProvider = Provider<GoRouter>((ref) {
           GoRoute(
             path: '/resources',
             builder: (context, state) => const ResourcesScreen(),
+          ),
+          GoRoute(
+            path: '/infographic',
+            builder: (context, state) => const EconomicsInfographicScreen(),
           ),
           GoRoute(
             path: '/notifications',

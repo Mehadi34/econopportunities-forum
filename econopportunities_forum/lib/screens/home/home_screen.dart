@@ -250,12 +250,21 @@ class _QuickActionsSection extends StatelessWidget {
         color: const Color(0xFFE65100),
         onTap: () => context.go('/members'),
       ),
+      _QuickAction(
+        icon: Icons.bar_chart_rounded,
+        label: 'Infographic',
+        color: const Color(0xFF00838F),
+        onTap: () => context.push('/infographic'),
+      ),
     ];
 
-    return Row(
-      children: actions
-          .map((action) => Expanded(child: _QuickActionCard(action: action)))
-          .toList(),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: actions
+            .map((action) => _QuickActionCard(action: action))
+            .toList(),
+      ),
     );
   }
 }
@@ -283,6 +292,7 @@ class _QuickActionCard extends StatelessWidget {
     return GestureDetector(
       onTap: action.onTap,
       child: Container(
+        width: 76,
         margin: const EdgeInsets.symmetric(horizontal: 4),
         padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
         decoration: BoxDecoration(
