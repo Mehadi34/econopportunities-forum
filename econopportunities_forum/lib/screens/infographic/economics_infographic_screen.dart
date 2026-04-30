@@ -523,7 +523,7 @@ class _EconomicConceptsList extends StatelessWidget {
       title: 'Monetary Policy',
       description:
           'Central banks manage the money supply and interest rates to control '
-          'inflation and stabilise the economy.',
+          'inflation and stabilize the economy.',
     ),
     _Concept(
       icon: Icons.receipt_long,
